@@ -12,12 +12,28 @@ function App() {
             <h2 className="text-lg font-medium">Pollák Kapu</h2>
           </div>
           <div className="w-[50%] flex flex-col justify-center items-center">
-            <h1 className="text-xl font-me">Bejelentkezés</h1>  
+            <h1 className="text-xl font-me">Bejelentkezés</h1>
             <Button variant="default" size="lg">
               jraudsers
             </Button>
             <div></div>
           </div>
+          <form action="">
+            <div className="w-[50%] grid justify-center items-center gap-6">
+              <h1 className="font-semibold text-3xl">Bejelentkezés</h1>
+              <div className="block">
+                <label htmlFor="omazonosito" className="font-normal ">
+                  OM azonosító
+                </label>
+                <input
+                  type="text"
+                  name="omazonosito"
+                  id="om"
+                  className="bg-white rounded-lg border-1 border-opacity-20"
+                />
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </>
