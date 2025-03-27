@@ -17,3 +17,17 @@
 * {
     color: #FFFFFF;
 }
+
+.hover-effect {
+  @apply relative inline-block text-white transition-colors duration-300 ease-in-out;
+}
+
+.hover-effect::before {
+  @apply absolute bottom-0 left-1/2 w-0 h-[2px] bg-white transition-all duration-300 ease-in-out;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.group:hover .hover-effect::before {
+  @apply w-full;
+}
