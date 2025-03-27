@@ -1,1 +1,19 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-main: #161A1D;
+  --color-card: #000000;
+  --color-input: #AEAEAE;
+  --color-text: #FFFFFF;
+  --color-pollak-green: #057352;
+  --color-danger: #FF0303;
+  --color-dark-text: #000000;
+  --color-active-button: #057352;
+  --color-disabled-button: #03C289;
+  --color-off: #848484;
+}
+
+*{
+    color: #FFFFFF;
+}
