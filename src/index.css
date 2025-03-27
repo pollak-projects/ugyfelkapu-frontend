@@ -3,7 +3,7 @@
 
 @theme {
   --color-main: #161A1D;
-  --color-card: #000000;
+  --color-card: #0F0E0F;
   --color-input: #AEAEAE;
   --color-text: #FFFFFF;
   --color-pollak-green: #057352;
@@ -14,6 +14,6 @@
   --color-off: #848484;
 }
 
-*{
+* {
     color: #FFFFFF;
 }
