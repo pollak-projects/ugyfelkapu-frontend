@@ -2,20 +2,20 @@
 @import "tw-animate-css";
 
 @theme {
-  --color-main: #161A1D;
-  --color-card: #0F0E0F;
-  --color-input: #AEAEAE;
-  --color-text: #FFFFFF;
+  --color-main: #161a1d;
+  --color-card: #0f0e0f;
+  --color-input: #aeaeae;
+  --color-text: #ffffff;
   --color-pollak-green: #057352;
-  --color-danger: #FF0303;
+  --color-danger: #ff0303;
   --color-dark-text: #000000;
   --color-active-button: #057352;
-  --color-disabled-button: #03C289;
+  --color-disabled-button: #03c289;
   --color-off: #848484;
 }
 
 * {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .hover-effect {
@@ -30,4 +30,8 @@
 
 .group:hover .hover-effect::before {
   @apply w-full;
+}
+
+.off-color-text {
+  color: var(--color-off) !important;
 }
