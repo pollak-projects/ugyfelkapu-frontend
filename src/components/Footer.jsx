@@ -42,8 +42,24 @@ const Footer = () => {
       icon: Icons.phone,
     },
   ];
+
+  const links = [
+    {
+      text: "Akadálymentességi nyilatkozat",
+      url: "https://www.youtube.com/watch?v=ThHvx5a9IYA"
+    },
+    {
+      text: "Adatkezelés",
+      url: "https://www.youtube.com/watch?v=6-8E4Nirh9s"
+    },
+    {
+      text: "Impresszum",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+  ];
+
   return (
-    <footer className="w-srceen bg-main text-center">
+    <footer className="w-srceen text-center">
       <div className="flex flesx-col items-center justify-center py-4">
         <a href="https://pollak.hu" target="_blank" rel="noopener noreferrer">
           <img
@@ -87,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row w-full ">
+      <div className="flex flex-row w-full">
         <div className="flex w-full items-center gap-4 py-2 pl-10 self-start">
           {socialLinks.map((link) => (
             <a
@@ -107,30 +123,17 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex flex-row items-center w-full gap-4 py-2 pr-10 justify-end">
-          <a
-            href="https://www.youtube.com/watch?v=ThHvx5a9IYA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group"
-          >
-            <span className="hover-effect">Akadálymentességi nyilatkozat</span>
-          </a>
-          <a
-            href="https://www.youtube.com/watch?v=6-8E4Nirh9s"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group"
-          >
-            <span className="hover-effect">Adatkezelés</span>
-          </a>
-          <a
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group"
-          >
-            <span className="hover-effect">Impresszum</span>
-          </a>
+          {links.map((link) => (
+            <a
+              key={link.text}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group"
+            >
+              <span className="hover-effect">{link.text}</span>
+            </a>
+          ))}
         </div>
       </div>
       <div className="flex justify-center items-center gap-4 py-2 mt-4">

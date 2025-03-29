@@ -1,9 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import pollak_logo_light from "../assets/pollak_logo_light.png";
 import pollak_logo_dark from "../assets/pollak_logo_dark.png";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate("/home");
+  };
+
   return (
     <>
       <div className="bg-main h-screen flex justify-center items-center">
@@ -12,7 +20,10 @@ function Login() {
             <img src={pollak_logo_light} alt="pollak_logo" className="ml-4" />
             <h2 className="text-3xl font-light">Pollák Kapu</h2>
           </div>
-          <form className="flex flex-col justify-center items-center w-[60%] gap-2">
+          <form
+            className="flex flex-col justify-center items-center w-[60%] gap-2"
+            onSubmit={handleSubmit}
+          >
             <h1 className="font-semibold text-3xl mb-2">Bejelentkezés</h1>
             <div className="flex flex-col gap-2 w-[90%] px-6">
               <Input
@@ -37,7 +48,7 @@ function Login() {
                 wrapperClassName="flex-row self-end"
               />
               <Button type="submit" className="self-end">
-                Küldés
+                Bejelentkezés
               </Button>
             </div>
           </form>

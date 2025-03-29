@@ -1,10 +1,12 @@
 import pollak_logo_light from "../assets/pollak_logo_light.png";
-import Footer from "../components/footer";
+import Layout from "../components/Layout";
 
 function Home() {
   return (
     <>
-        <Footer />
+      <Layout>
+
+      </Layout>
     </>
   );
 }
