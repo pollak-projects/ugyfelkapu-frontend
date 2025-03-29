@@ -46,15 +46,15 @@ const Footer = () => {
   const links = [
     {
       text: "Akadálymentességi nyilatkozat",
-      url: "https://www.youtube.com/watch?v=ThHvx5a9IYA"
+      url: "https://www.youtube.com/watch?v=ThHvx5a9IYA",
     },
     {
       text: "Adatkezelés",
-      url: "https://www.youtube.com/watch?v=6-8E4Nirh9s"
+      url: "https://www.youtube.com/watch?v=6-8E4Nirh9s",
     },
     {
       text: "Impresszum",
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     },
   ];
 
@@ -136,10 +136,15 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center gap-4 py-2 mt-4">
-        <img src={hszc_logo} alt="hszc_logo" />
-        <a href="https://hszc.hu" target="_blank" rel="noopener noreferrer">
-          Hódmezővásárhelyi Szakképzési Centrum
+      <div className="flex justify-center items-center py-2 mt-4 bg-main">
+        <a
+          href="https://hszc.hu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row items-center gap-4"
+        >
+          <img src={hszc_logo} alt="hszc_logo" />
+          <p className="hover-effect">Hódmezővásárhelyi Szakképzési Centrum</p>
         </a>
       </div>
     </footer>

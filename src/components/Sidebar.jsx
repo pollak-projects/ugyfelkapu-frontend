@@ -14,6 +14,7 @@ import {
   ChevronDown,
   Accessibility,
   Settings,
+  LogOut,
 } from "lucide-react";
 import { Button } from "./Button";
 
@@ -120,10 +121,11 @@ const Sidebar = () => {
                 location.pathname === link.path
                   ? "underline decoration-pollak-green decoration-2 underline-offset-5"
                   : ""
+              } ${isOpen ? "" : "justify-center"}
               }`}
               onClick={() => link.subLinks && toggleDropdown(index)}
             >
-              {link.icon && <span className="mr-3">{link.icon}</span>}
+              {link.icon && <span>{link.icon}</span>}
               <span className={`${isOpen ? "block" : "hidden"}`}>
                 {link.name}
               </span>
@@ -157,6 +159,10 @@ const Sidebar = () => {
           {userName}
         </span>
         <Button variant="no_bg" size="icon">
+          <LogOut
+            color="#FF0303"
+            className={`${isOpen ? "block" : "hidden"}`}
+          />
           <Settings />
         </Button>
       </div>
