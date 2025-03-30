@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import pollak_logo from "../assets/pollak_logo_light.png";
 import {
+  Home,
   FileUser,
   Utensils,
   NotebookText,
@@ -35,7 +36,8 @@ const Sidebar = () => {
   const userName = "John Doe";
 
   const links = [
-    { name: "Személyes adatok változása", path: "/home", icon: <FileUser /> },
+    { name: "Főoldal", path: "/home", icon: <Home /> },
+    { name: "Személyes adatok változása", path: "", icon: <FileUser /> },
     { name: "Étkezés Igénylése", path: "", icon: <Utensils /> },
     {
       name: "Törzslap másolat",
@@ -57,7 +59,7 @@ const Sidebar = () => {
   return (
     <div
       className={`flex flex-col h-screen bg-card text-white transition-all duration-300 ${
-        isOpen ? "w-74" : "w-14"
+        isOpen ? "w-85" : "w-14"
       }`}
     >
       <div className="flex items-center justify-between px-1 py-4">
@@ -154,17 +156,23 @@ const Sidebar = () => {
         ))}
       </nav>
 
-      <div className="flex items-center justify-between px-4 py-4 border-t border-gray-600">
-        <span className={`${isOpen ? "block" : "hidden"} text-sm`}>
+      <div className="flex items-center justify-between px-4 py-4 border-t border-gray-700">
+        <span className={`${isOpen ? "block" : "hidden"}`}>
           {userName}
         </span>
-        <Button variant="no_bg" size="icon">
-          <LogOut
-            color="#FF0303"
-            className={`${isOpen ? "block" : "hidden"}`}
-          />
-          <Settings />
-        </Button>
+        <div className={`flex items-center justify-center ${isOpen ? "gap-2" : "gap-0"}`}>
+          <Link to="/login">
+            <Button variant="no_bg" size="auto">
+              <LogOut
+                color="#FF0303"
+                className={`${isOpen ? "block" : "hidden"}`}
+              />
+            </Button>
+          </Link>
+          <Button variant="no_bg" size="auto">
+            <Settings />
+          </Button>
+        </div>
       </div>
     </div>
   );

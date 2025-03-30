@@ -12,6 +12,7 @@
   --color-active-button: #057352;
   --color-disabled-button: #03c289;
   --color-off: #848484;
+  --color-unselected: #03C289;
 }
 
 * {

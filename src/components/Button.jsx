@@ -10,14 +10,16 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-pollak-green hover:bg-pollak-green/85 hover:ring-1 hover:ring-white/70",
-        no_bg: "hover:ring-1 hover:ring-white/70",
+          "bg-pollak-green hover:bg-pollak-green/85 hover:ring-2 hover:ring-white/70",
+        no_bg: "hover:ring-2 hover:ring-white/70",
         sidebar:
           "flex px-4 py-5 hover:bg-gray-700 rounded-md transition-colors justify-start font-light text-lg",
+        unselected:
+          "bg-unselected hover:bg-unselected/85 hover:ring-2 hover:ring-white/70",
       },
       size: {
         default: "h-7 w-auto px-3 rounded-[12px]",
-        sm: "h-8 rounded-md px-3 text-xs",
+        sm: "h-8 rounded-[16px] px-3",
         lg: "h-10 rounded-md px-8",
         sidebar_icon: "h-8 w-8",
         auto: "size-auto h-9 rounded-md",

@@ -1,15 +1,36 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import pollak_logo_light from "../assets/pollak_logo_light.png";
-import pollak_logo_dark from "../assets/pollak_logo_dark.png";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import { Check } from "lucide-react";
 
 function Login() {
   const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+  const [showCheckmark, setShowCheckmark] = useState(false);
+
+  const validateOMInput = (omInput) => {
+    return omInput.length === 11 && /^\d+$/.test(omInput);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate("/home");
+    const omInput = event.target.elements.om.value;
+
+    if (!validateOMInput(omInput)) {
+      alert("Az OM azonosítónak pontosan 11 számjegyből kell állnia!");
+      return;
+    }
+
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowCheckmark(true);
+      setTimeout(() => {
+        setShowPopup(false);
+        navigate("/home");
+      }, 1000);
+    }, 4000);
   };
 
   return (
@@ -32,6 +53,9 @@ function Login() {
                 id="om"
                 placeholder="12345678912"
                 className="mb-2"
+                minLength={11}
+                maxLength={11}
+                required
               />
               <Input
                 label="Jelszó"
@@ -39,6 +63,7 @@ function Login() {
                 id="password"
                 placeholder="Diakjelszó123%"
                 className="mb-2"
+                required
               />
               <Input
                 variant="checkbox"
@@ -54,6 +79,22 @@ function Login() {
           </form>
         </div>
       </div>
+
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-black/50 z-50">
+          <div className="bg-card p-8 rounded-lg shadow-lg flex flex-col items-center">
+
+              <img src={pollak_logo_light} alt="pollak_logo" className="ml-4" />
+              <h2 className="text-3xl font-light">Üdvözli a Pollák Kapu!</h2>
+
+            {!showCheckmark ? (
+              <div className="p-4 border-4 border-pollak-green border-t-transparent rounded-full animate-spin mt-4"/>
+            ) : (
+              <Check size={48} strokeWidth={2.5} />
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 }
