@@ -12,11 +12,49 @@
   --color-active-button: #057352;
   --color-disabled-button: #03c289;
   --color-off: #848484;
-  --color-unselected: #03C289;
+  --color-unselected: #03c289;
+}
+
+@layer components {
+  .card {
+    @apply bg-card rounded-[20px] w-full p-[40px] drop-shadow-[0px_4px_4px_rgba(0,0,0)];
+  }
+
+  .card-title {
+    @apply text-3xl font-light text-left;
+  }
+
+  .overflow-underline {
+    @apply relative text-left inline-block;
+  }
+
+  .overflow-underline::after {
+    content: "";
+    @apply absolute left-0 bottom-[-4.5px] h-[2.5px] bg-pollak-green;
+    width: calc(
+      100% + 20px
+    );
+  }
+
+  .sub-title {
+    @apply text-2xl font-bold text-left;
+  }
 }
 
 * {
   color: #ffffff;
+}
+
+.off-color-text {
+  color: var(--color-off) !important;
+}
+
+.text-black {
+  color: var(--color-dark-text) !important;
+}
+
+.text-pollak-green {
+  color: var(--color-pollak-green) !important;
 }
 
 .hover-effect {
@@ -31,8 +69,4 @@
 
 .group:hover .hover-effect::before {
   @apply w-full;
-}
-
-.off-color-text {
-  color: var(--color-off) !important;
 }

@@ -14,13 +14,13 @@ const buttonVariants = cva(
         no_bg: "hover:ring-2 hover:ring-white/70",
         sidebar:
           "flex px-4 py-5 hover:bg-gray-700 rounded-md transition-colors justify-start font-light text-lg",
-        unselected:
-          "bg-unselected hover:bg-unselected/85 hover:ring-2 hover:ring-white/70",
+        switch:
+          "bg-[#BECCC5] hover:bg-[#BECCC5]/80 text-black font-normal rounded-md px-4 py-2 ",
       },
       size: {
         default: "h-7 w-auto px-3 rounded-[12px]",
-        sm: "h-8 rounded-[16px] px-3",
-        lg: "h-10 rounded-md px-8",
+        md: "h-9 w-30 rounded-[16px] px-3 text-md",
+        lg: "h-10 rounded-[20px] px-4 text-lg",
         sidebar_icon: "h-8 w-8",
         auto: "size-auto h-9 rounded-md",
       },
