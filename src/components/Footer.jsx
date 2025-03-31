@@ -92,7 +92,7 @@ const Footer = () => {
               <Button className="rounded-none">Órarend</Button>
             </a>
             <a
-              href="https://idp.e-kreta.hu/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dkreta-web%26response_type%3Dcode%26scope%3Dopenid%2520email%26state%3DOpenIdConnect.AuthenticationProperties%253DKLZHtZL5YujfBygWtJYzVKwmQqY1j2rCSL289mkFY7e0vZM7xdyfWjLB98uvIaurPsKo4YmIQlaFLPqgaKXvGlb4iPlm7ORKo1dD89B1TMjj5k_eABZhV3HbV8MPn2mUnnZOcdZFnh-kJz_NTeC43w%26response_mode%3Dform_post%26nonce%3D638787866776506894.ZGFkYzJmMmItOTI1My00YzUyLTljYWQtMTE2MTZlOGNiOTMxYzNlNmJmOTAtY2M0YS00NDY0LWExMDItYmZiNzk0NWUxZjIy%26institute_code%3Dhszc-pollak%26institute_data%3DeyJuZXh0X3VwZGF0ZV9kYXRlX3RpbWUiOiIyMDI1LjA0LjA5LiAyMjowMCIsImlzX3N6aXJfaW5zdGl0dXRlIjpmYWxzZSwiaXNfbGljZW5jZV92YWxpZCI6dHJ1ZSwiaXNfYXJjaGl2ZSI6ZmFsc2UsImlzX2Nzb2trZW50ZXR0X2dvbmR2aXNlbG8iOmZhbHNlLCJpc19pbnRlem1lbnlfcm92aWRuZXYiOnRydWUsImlzX3N1Y2Nlc3NfYXV0aG9yaXplZF9kYXRlIjpmYWxzZX0%253D%26prompt%3Dlogin%26redirect_uri%3Dhttps%253A%252F%252Fhszc-pollak.e-kreta.hu%26x-client-SKU%3DID_NET461%26x-client-ver%3D5.3.0.0%26suppressed_prompt%3Dlogin"
+              href="https://hszc-pollak.e-kreta.hu/Adminisztracio/Login"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -36,9 +36,9 @@ const Sidebar = () => {
   const userName = "John Doe";
 
   const links = [
-    { name: "Főoldal", path: "/home", icon: <Home /> },
+    { name: "Főoldal", path: "/", icon: <Home /> },
     { name: "Személyes adatok változása", path: "", icon: <FileUser /> },
-    { name: "Étkezés Igénylése", path: "", icon: <Utensils /> },
+    { name: "Étkezés Igénylése", path: "/etkezes", icon: <Utensils /> },
     {
       name: "Törzslap másolat",
       icon: <NotebookText />,
