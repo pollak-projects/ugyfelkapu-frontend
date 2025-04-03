@@ -37,7 +37,7 @@ const Sidebar = () => {
 
   const links = [
     { name: "Főoldal", path: "/", icon: <Home /> },
-    { name: "Személyes adatok változása", path: "", icon: <FileUser /> },
+    { name: "Személyes adatok változása", path: "/profile", icon: <FileUser /> },
     { name: "Étkezés Igénylése", path: "/etkezes", icon: <Utensils /> },
     {
       name: "Törzslap másolat",
