@@ -19,7 +19,7 @@ const buttonVariants = cva(
       },
       size: {
         default: "h-7 w-auto px-3 rounded-[12px]",
-        md: "h-9 w-30 rounded-[16px] px-3 text-md",
+        md: "h-9 w-40 rounded-[16px] px-3 text-md",
         lg: "h-10 rounded-[20px] px-4 text-lg",
         sidebar_icon: "h-8 w-8",
         auto: "size-auto h-9 rounded-md",

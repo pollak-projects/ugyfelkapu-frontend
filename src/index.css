@@ -17,7 +17,7 @@
 
 @layer components {
   .card {
-    @apply bg-card rounded-[20px] w-full p-[40px] drop-shadow-[0px_4px_4px_rgba(0,0,0)];
+    @apply bg-card rounded-[20px] w-auto p-[40px] drop-shadow-[0px_4px_4px_rgba(0,0,0)];
   }
 
   .card-title {

@@ -28,7 +28,7 @@ function Login() {
       setShowCheckmark(true);
       setTimeout(() => {
         setShowPopup(false);
-        navigate("/home");
+        navigate("/");
       }, 1000);
     }, 4000);
   };
