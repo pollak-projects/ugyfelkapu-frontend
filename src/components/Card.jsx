@@ -12,6 +12,7 @@ const Card = ({
     <a
       href={href}
       className={`flex flex-col items-center bg-card rounded-lg shadow-sm md:flex-row hover:bg-main p-3 ${className}`}
+      target="_blank"
     >
       <img
         className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-70 md:rounded-none md:rounded-s-lg"

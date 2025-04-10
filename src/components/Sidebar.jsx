@@ -58,11 +58,11 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`flex flex-col h-screen bg-card text-white transition-all duration-300 ${
+      className={`flex flex-col h-screen bg-card text-white transition-all duration-300 sticky top-0 ${
         isOpen ? "w-85" : "w-14"
       }`}
     >
-      <div className="flex items-center justify-between px-1 py-4">
+      <div className="flex items-center justify-between px-1 py-4 ">
         <Button variant="no_bg" onClick={toggleSidebar}>
           <div
             className={`flex flex-col justify-center items-center w-6 h-6 cursor-pointer gap-1 ${
@@ -156,7 +156,7 @@ const Sidebar = () => {
         ))}
       </nav>
 
-      <div className="flex items-center justify-between px-4 py-4 border-t border-gray-700">
+      <div className="flex items-center justify-between px-4 py-4 border-t border-gray-400">
         <span className={`${isOpen ? "block" : "hidden"}`}>
           {userName}
         </span>

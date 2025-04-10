@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @theme {
   --color-main: #161a1d;
@@ -13,6 +14,12 @@
   --color-disabled-button: #03c289;
   --color-off: #848484;
   --color-unselected: #03c289;
+
+}
+
+* {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
 }
 
 @layer components {
@@ -39,10 +46,6 @@
   .sub-title {
     @apply text-2xl font-bold text-left;
   }
-}
-
-* {
-  color: #ffffff;
 }
 
 .off-color-text {
